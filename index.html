@@ -75,7 +75,7 @@
 
   /* NAVBAR */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
     padding: 18px 60px;
     display: flex; align-items: center; justify-content: space-between;
     background: rgba(2,4,8,0.85);
@@ -96,6 +96,8 @@
     text-decoration: none; letter-spacing: 1.5px;
     transition: all 0.3s;
     position: relative;
+    pointer-events: auto;
+    cursor: pointer;
   }
   .nav-links a::before { content: '//'; margin-right: 4px; color: var(--cyan); opacity: 0; transition: opacity 0.3s; }
   .nav-links a:hover { color: var(--cyan); }
