@@ -35,6 +35,8 @@
     font-size: 16px;
     overflow-x: hidden;
     cursor: default;
+    -webkit-user-select: text;
+    user-select: text;
   }
 
   /* CUSTOM CURSOR */
@@ -62,7 +64,7 @@
     content: '';
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
-    pointer-events: none; z-index: 9990;
+    pointer-events: none; user-select: none; z-index: 9990;
   }
 
   /* NOISE OVERLAY */
@@ -70,9 +72,16 @@
     content: '';
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9989; opacity: 0.4;
+    pointer-events: none; user-select: none; z-index: 9989; opacity: 0.4;
+  }
+  /* FIX TEXT SELECTION */
+  .cursor, .cursor-trail {
+  user-select: none;
   }
 
+  * {
+  user-select: text;
+  }
   /* NAVBAR */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
