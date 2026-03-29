@@ -371,15 +371,18 @@
     content: '';
     position: absolute; inset: 0;
     background: linear-gradient(180deg, transparent 60%, rgba(0,240,255,0.08));
+    pointer-events: none;
   }
   .about-photo-placeholder {
     font-size: 60px; color: var(--cyan); opacity: 0.25;
   }
   .about-photo-scan {
     position: absolute; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    background: linear-gradient(...);
     animation: scan 3s ease-in-out infinite;
     box-shadow: 0 0 10px var(--cyan);
+    pointer-events: none;
+    user-select: none;
   }
   @keyframes scan { 0%{top:0;opacity:0.8} 50%{opacity:1} 100%{top:100%;opacity:0} }
   .about-id {
