@@ -1264,10 +1264,20 @@ section::before, section::after {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
     setTimeout(() => {
-      trail.style.left = e.clientX + 'px';
-      trail.style.top = e.clientY + 'px';
+        trail.style.left = e.clientX + 'px';
+        trail.style.top = e.clientY + 'px';
     }, 80);
-  });
+});
+
+document.addEventListener('mousedown', () => {
+    cursor.style.display = 'none';
+    trail.style.display = 'none';
+});
+
+document.addEventListener('mouseup', () => {
+    cursor.style.display = 'block';
+    trail.style.display = 'block';
+});
 
   // SCROLL REVEAL
   const reveals = document.querySelectorAll('.reveal');
