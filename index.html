@@ -93,6 +93,10 @@ section::before, section::after {
   pointer-events: none;
   user-select: none;
 }
+/* CURSOR POINTER FIX */
+a, button, .contact-item, .btn-primary, .btn-secondary, .nav-links a, .role-tag, .skill-tag, .project-link {
+  cursor: pointer !important;
+}
   /* NAVBAR */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
@@ -119,7 +123,7 @@ section::before, section::after {
     transition: all 0.3s;
     position: relative;
     pointer-events: auto;
-    cursor: pointer;
+    cursor: pointer !important;
   }
   .nav-links a::before { content: '//'; margin-right: 4px; color: var(--cyan); opacity: 0; transition: opacity 0.3s; }
   .nav-links a:hover { color: var(--cyan); }
